@@ -15,7 +15,7 @@ order: 3
 
 ### Endpoints
 
-- [Get all leaderboards for a game](#get-all-leaderboards-for-a-game) : `GET /leaderboard/:gameId/`
+- [Get all leaderboards for a game](#get-all-leaderboards-for-a-game) : `none GET /leaderboard/:gameId/`
 - [Get a leaderboard](#get-a-leaderboard) : `GET /leaderboard/:gameId/:leaderboardId/`
 - [Get all reported scores for a leaderboard](#get-all-reported-scores-for-a-leaderboard) : `GET /leaderboard/:gameId/:leaderboardId/score`
 - [Report a score to a leaderboard](#report-a-score-to-a-leaderboard) : `POST /leaderboard/:gameId/:leaderboardId/score/`
@@ -40,7 +40,7 @@ Protected endpoints require a service account token in the `Authorization`-heade
 
 Pseudo code JSON example:
 
-```
+```json
 {
   "headers": {
     "Authorization": "Bearer ${your-service-account-token-here}",
@@ -70,7 +70,7 @@ Fetches all leaderboards for a specific game. Will return a paginated list. The 
 
 **Success response 200**:
 
-```
+```json
 {
   "nextCursor": "string",
   "hasMore": true,
@@ -113,7 +113,7 @@ Returns a paginated list of all currently reported scores of the leaderboard.
 
 **Success response 200**:
 
-```
+```json
 {
   "nextCursor": "string",
   "hasMore": true,
@@ -144,7 +144,7 @@ Submits a result that should be displayed on the leaderboard.
 
 **Request body**:
 
-```
+```json
 {
   /* The value that will be visible on the leaderboard. */
   "displayValue": "10/15/2020 @ 1:47pm (UTC)",
@@ -160,7 +160,7 @@ Submits a result that should be displayed on the leaderboard.
 
 **Success response 200**:
 
-```
+```json
 {
   "result": {
     /* Some leaderboards can be configured to have multiple tries (or entries) per user,
@@ -211,7 +211,7 @@ Submits a result that should be displayed on the leaderboard.
 
 #### JSON example
 
-```
+```json
 {
   "gameId": "wonky-weavers",
   "numberOfParticipants": 23,
@@ -234,7 +234,7 @@ Submits a result that should be displayed on the leaderboard.
 
 ### Score
 
-```
+```json
 {
   "score": "14",
   "name": "Tiny Tim"

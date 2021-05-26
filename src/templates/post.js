@@ -16,10 +16,9 @@ const SearchBarWrapper = styled(Vector)`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 5fr 1fr;
+  grid-template-columns: 1.5fr 10fr 1fr;
   grid-template-rows: auto;
 
-  max-width: 1000px;
   margin: 0 auto;
 `;
 
@@ -49,6 +48,62 @@ const MarkdownBody = styled.div`
     svg:focus,
     svg:hover {
       opacity: 1;
+    }
+  }
+  /* Adjust the position of the line numbers */
+  .gatsby-highlight pre[class*="language-"].line-numbers {
+    padding-left: 2.8em;
+  }
+
+  /**
+ * If you only want to use line numbering
+ */
+
+  .gatsby-highlight {
+    background-color: #2d2d2d;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+    padding: 1em;
+    overflow: auto;
+  }
+
+  .gatsby-highlight pre[class*="language-"].line-numbers {
+    padding: 0;
+    padding-left: 2.8em;
+    overflow: initia;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    margin-bottom: 16px;
+    margin-top: 0;
+    overflow: auto;
+    width: 100%;
+
+    thead,
+    tr,
+    tbody {
+      border: 0;
+      font: inherit;
+      font-size: 100%;
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
+    }
+    tr {
+      background-color: transparent;
+      border-top: 1px solid #dfe2e5;
+    }
+    th {
+      background-color: inherit;
+      font-weight: 600;
+    }
+    td,
+    th {
+      border: 1px solid #dfe2e5;
+      padding: 6px 13px;
     }
   }
 `;
