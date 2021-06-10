@@ -7,7 +7,7 @@ order: 3
 
 Once the tournament is over, and the leaderboard is set and complete, the last step is to let the user redeem and withdraw their winnings.
 
-![image deliverance](assets/voucher/deliverance.png)
+![image deliverance](../assets/deliverance.png)
 
 ## Delivering the vouchers
 

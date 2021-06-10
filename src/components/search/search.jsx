@@ -3,7 +3,7 @@ import { useFlexSearch } from "react-use-flexsearch";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { Vector } from "@g-loot/payments-react-components";
+import { Vector, TextInput } from "@g-loot/payments-react-components";
 
 const StyledWrapper = styled(Vector)`
   position: relative;
@@ -23,6 +23,7 @@ const SearchResults = styled.div`
   border-radius: 5px;
   width: 100%;
   background: lightgray;
+  top: 1.75rem;
 `;
 const Result = styled(Link)`
   display: block;
@@ -40,19 +41,19 @@ const SearchBar = ({ ...rest }) => {
     }
   `);
   const { index, store } = data.localSearchPosts;
-  const [query, setQuery] = useState(null);
+  const [query, setQuery] = useState("");
 
   const results = useFlexSearch(query, index, store);
-  console.log(results);
+
   return (
     <StyledWrapper {...rest}>
-      <StyledTextInput
-        label="Search"
+      <TextInput
         placeholder="Search..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      {results && results.length > 0 && (
+
+      {query.length >= 3 && results && results.length > 0 && (
         <SearchResults>
           {results.map((result) => (
             <Result to={`/docs/${result.slug}`}>{result.title}</Result>

@@ -5,7 +5,7 @@ sidebar_category: leaderboard service
 order: 2
 ---
 
-## 1. Prerequisites
+## Prerequisites
 
 Before using this the api G-Loot needs to do the following:
 
@@ -29,7 +29,7 @@ If the vouchers should be delivered automatically by us when the challenge is do
 
 ### Showing the leaderboard
 
-In the response body of the `POST` call, some [properties will be returned](sls-api.md#report-a-score-to-a-leaderboard) for optional presentation in the game. Among these are the URL to the web page displaying the leaderboard. This page can be linked to or embedded in the game after the POST wall was made. Optionally, the link could be delivered to the player-base by other means, for example by sharing it on social media.
+In the response body of the `POST` call, some [properties will be returned](/docs/sls-api/#report-a-score-to-a-leaderboard) for optional presentation in the game. Among these are the URL to the web page displaying the leaderboard. This page can be linked to or embedded in the game after the POST wall was made. Optionally, the link could be delivered to the player-base by other means, for example by sharing it on social media.
 
 ### Retries
 

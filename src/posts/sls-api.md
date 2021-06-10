@@ -15,15 +15,15 @@ order: 3
 
 ### Endpoints
 
-- [Get all leaderboards for a game](#get-all-leaderboards-for-a-game) : `none GET /leaderboard/:gameId/`
-- [Get a leaderboard](#get-a-leaderboard) : `GET /leaderboard/:gameId/:leaderboardId/`
-- [Get all reported scores for a leaderboard](#get-all-reported-scores-for-a-leaderboard) : `GET /leaderboard/:gameId/:leaderboardId/score`
-- [Report a score to a leaderboard](#report-a-score-to-a-leaderboard) : `POST /leaderboard/:gameId/:leaderboardId/score/`
+- [Get all leaderboards for a game](#Get-all-leaderboards-for-a-game) : `none GET /leaderboard/:gameId/`
+- [Get a leaderboard](#Get-a-leaderboard) : `GET /leaderboard/:gameId/:leaderboardId/`
+- [Get all reported scores for a leaderboard](#Get-all-reported-scores-for-a-leaderboard) : `GET /leaderboard/:gameId/:leaderboardId/score`
+- [Report a score to a leaderboard](#Report-a-score-to-a-leaderboard) : `POST /leaderboard/:gameId/:leaderboardId/score/`
 
 ### Response data
 
-- [Leaderboard](#leaderboard)
-- [Score](#score)
+- [Leaderboard](#Leaderboard)
+- [Score](#Score)
 
 ### Response Headers
 
@@ -65,7 +65,7 @@ Fetches all leaderboards for a specific game. Will return a paginated list. The 
 | gameId | **path** | **yes** | string | - | The game id for which the leaderboards should be fetched. |
 | limit | query | no | int | 100 | For pagination. The maximum number of entries that the answer can contain. |
 | cursor | query | no | string | - | For pagination. The pointer to the next set of entries to retrieve. |
-| state | query | no | [see states](sls-guide.md#leaderboard-states) | - | For filtering the entries by a specific state. State `ACTIVE` only fetches ongoing leaderboards. |
+| state | query | no | [see states](/docs/sls-guide/#leaderboard-states) | - | For filtering the entries by a specific state. State `ACTIVE` only fetches ongoing leaderboards. |
 | type | query | no | string | - | For filtering the entries by type. Enables the consumer to make arbitrary groups based on a free-text string. |
 
 **Success response 200**:

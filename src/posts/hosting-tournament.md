@@ -10,7 +10,7 @@ The ways that a tournament could be implemented are manifold. As long as the com
 
 In the graphical interface of the game, it must be clear that G-Loot legally hosts the competition. The user is required to read and accept the G-Loot terms & conditions before entering the game.
 
-![image hosting](assets/voucher/hosting.png)
+![image hosting](../assets/hosting.png)
 
 ## Using our geo-compliance service
 
